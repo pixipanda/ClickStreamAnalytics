@@ -20,7 +20,7 @@ object SparkConfig {
 
   def load() = {
     logger.info("Loading Spark Setttings")
-    sparkConf.setMaster("local[*]")
+    sparkConf.setMaster(Config.applicationConf.getString("spark.master"))
       .set("spark.cassandra.connection.host", Config.applicationConf.getString("cassandra.hostname"))
       .set("spark.streaming.kafka.maxRatePerPartition", Config.applicationConf.getString("spark.max.rate.per.partition"))
     batchInterval = Config.applicationConf.getString("spark.batch.interval").toInt
