@@ -66,6 +66,8 @@ object ClickStreamLogProcessing {
       "schema.registry.url" -> "http://localhost:8081",
       "specific.avro.reader" -> "true")
 
+
+
     logger.info("Connecting to Kafka")
     val kafkaDstream = KafkaUtils.createDirectStream[String, ClickStream](ssc,
                        PreferConsistent,

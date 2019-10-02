@@ -25,7 +25,7 @@ object KafkaConfig {
     kafkaParams.put("schema.registry", Config.applicationConf.getString("kafka.schema.registry"))
     kafkaParams.put("enable.auto.commit", Config.applicationConf.getString("kafka.enable.auto.commit"))
     kafkaParams.put("auto.offset.reset", Config.applicationConf.getString("kafka.auto.offset.reset"))
-    kafkaParams.put("specific.avro.reader", Config.applicationConf.getString("specific.avro.reader"))
+    kafkaParams.put("specific.avro.reader", Config.applicationConf.getString("kafka.specific.avro.reader"))
 
   }
 
